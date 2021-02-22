@@ -2,7 +2,7 @@
   "name": "trace.moe.ts",
   "version": "1.0.0",
   "description": "An API wrapper for https://trace.moe with typings",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "TheRealKizu <@therealkizu@protonmail.com>",
   "license": "GPL-3.0",
   "homepage": "https://github.com/TheRealKizu/trace.moe.ts#readme",
@@ -14,13 +14,17 @@
     "url": "https://github.com/TheRealKizu/trace.moe.ts/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node ."
   },
   "keywords": [
     "trace-moe",
-    "api-wrapper"
+    "api",
+    "wrapper"
   ],
   "dependencies": {
-    "@types/node": "^14.14.31"
+    "@types/node": "^14.14.31",
+    "@types/node-fetch": "^2.5.8",
+    "node-base64-image": "^2.0.3",
+    "node-fetch": "^2.6.1"
   }
 }
