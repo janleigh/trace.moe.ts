@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import { encode } from "node-base64-image";
-import { Response } from "../typings/index.d";
+import { Response } from "../typings";
 
 export class API {
 
@@ -20,9 +20,6 @@ export class API {
      * @param {string} imageURL The URL for the image.
      */
     async fetchAnime(imageURL: string): Promise<Response> {
-        if (typeof imageURL !== "string")
-            Error("Image URL should be a string!");
-
         return await fetch("https://trace.moe/api/search", {
             method: "POST",
             body: JSON.stringify({
