@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 import { encode } from "node-base64-image";
-import { Response } from "../typings";
+import { Response, PreviewType } from "../typings";
 
 export class API {
 
@@ -28,6 +28,32 @@ export class API {
             headers: { "Content-Type": "application/json" }
         })
             .then((res) => res.json());
+    }
+
+    /**
+     * Returns an URL to an image/video preview of the similar anime.
+     * Use <API>.fetchAnime() to get the needed parameters.
+     * @param {string|PreviewType} type Whether if type is image or video
+     * @param {number} anilistID The Anilist ID of the similar anime.
+     * @param {number} at The "at" value of the similar anime.
+     * @param {string} filename The filename of the similar anime.
+     * @param {string} tokenthumb The thumbnail token of the similar anime.
+     */
+    async fetchPreviewURL(type: string|PreviewType, anilistID: number, at: number, filename: string, tokenthumb: string) {
+        if (type !== "image" || "video")
+            return Error("Invalid provided type!");
+
+        switch (type) {
+            default:
+            case "image":
+                let anID = encodeURIComponent(anilistID),
+                    t = encodeURIComponent(at),
+                    fn = encodeURIComponent(filename),
+                    token = encodeURIComponent(tokenthumb)
+
+                return `https://trace.moe/thumbnail.php?anilist_id=${anID}&file=${fn}&t=${t}&token=${token}`;
+                break;
+        }
     }
 
     /**

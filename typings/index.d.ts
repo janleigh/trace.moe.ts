@@ -30,3 +30,7 @@ export interface Doc {
     title_romaji: string;
     tokenthumb: string;
 }
+
+export interface PreviewType {
+    type: "image" | "video";
+}
