@@ -2,12 +2,7 @@
 # ★ trace.moe.ts
 
 <!--- DESCRIPTION --->
-  > An API wrapper for https://trace.moe with typings
-  
-<!--- INFORMATION --->
-## — Info
-   * Written using [TypeScript](https://www.typescriptlang.org/)
-   * Maintained by [@TheRealKizu](https://github.com/TheRealKizu)
+  > An API wrapper for https://trace.moe with typings.
 
 <!--- INSTALLATION --->
 ## — Installation
@@ -18,7 +13,7 @@
    
    * With `yarn`
      ```
-      $ yarn install trace.moe.ts
+      $ yarn add trace.moe.ts
      ``` 
 
 <!--- EXAMPLE --->
@@ -36,19 +31,25 @@
    
    * Fetching similar anime
      ```js
-     const api = new API();
+     <API>.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg");
 
-     api.fetchAnime("https://cdn.mythcord.cf/u/mItpBjo.png");
-     // Title: Re:ゼロから始める異世界生活
-     // Episode 11
-     // Check typings file for example response.
+     // Example Response.
+     {
+      anilist: {
+        id: 12189,
+        idMal: 12189,
+        title: { native: '氷菓', romaji: 'Hyouka', english: 'Hyouka' },
+        synonyms: [ 'Hyouka: Forbidden Secrets' ],
+        isAdult: false
+      },
+      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
+      episode: 3,
+      from: 471.25,
+      to: 474.83,
+      similarity: 0.9617157287525382
+     }
      ``` 
 
 <!--- LICENSE --->
 ## — License
    * This project is licensed under the [GPL-3.0](LICENSE) license.
-
-<!--- SUPPORT --->
-## — Support
-   * Discord Account: `TheRealKizu#3267`
-   * Email: `therealkizu@protonmail.com`

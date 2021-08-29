@@ -1,32 +1,28 @@
 export interface Response {
-    RawDocsCount: number;
-    CacheHit: boolean;
-    trial: number;
-    limit: number;
-    limit_ttl: number;
-    quota: number;
-    quota_ttl: number;
-    RawDocsSearchTime: number;
-    ReRankSearchTime: number;
-    docs: Doc[];
+    frameCount: number;
+    error: string;
+    result: Result[];
 }
   
-export interface Doc {
+export interface Result {
+    anilist: number|Anilist;
     filename: string;
-    episode?: number;
+    episode: number|null;
     from: number;
     to: number;
     similarity: number;
-    anilist_id: number;
-    anime: string;
-    at: number;
-    is_adult: boolean;
-    mal_id: number;
-    season: string;
-    title: string;
-    title_chinese: string;
-    title_english?: string;
-    title_native: string;
-    title_romaji: string;
-    tokenthumb: string;
+    video: string;
+    image: string;
+}
+
+export interface Anilist {
+    id: number;
+    idMal: number;
+    title: {
+        native: string;
+        romanji: string;
+        english: string;
+    }
+    synonyms: string[];
+    isAdult: boolean;
 }
