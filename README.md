@@ -3,11 +3,6 @@
 
 <!--- DESCRIPTION --->
   > An API wrapper for https://trace.moe with typings.
-  
-<!--- INFORMATION --->
-## — Info
-   * Written using [TypeScript](https://www.typescriptlang.org/)
-   * Maintained by [@TheRealKizu](https://github.com/TheRealKizu)
 
 <!--- INSTALLATION --->
 ## — Installation
@@ -37,8 +32,8 @@
    * Fetching similar anime
      ```js
      <API>.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg");
+
      // Example Response.
-     /* 
      {
       anilist: {
         id: 12189,
@@ -52,8 +47,7 @@
       from: 471.25,
       to: 474.83,
       similarity: 0.9617157287525382
-     } 
-     */
+     }
      ``` 
 
 <!--- LICENSE --->
