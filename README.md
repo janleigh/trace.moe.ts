@@ -31,9 +31,12 @@
    
    * Fetching similar anime
      ```js
-     <API>.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg");
+     const api = new API();
 
-     // Example Response.
+     await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg");
+
+     /* 
+     == Example Response
      {
       anilist: {
         id: 12189,
@@ -48,6 +51,7 @@
       to: 474.83,
       similarity: 0.9617157287525382
      }
+     */
      ``` 
 
 <!--- LICENSE --->
