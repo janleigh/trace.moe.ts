@@ -19,7 +19,7 @@ export class API {
      * @param {string} imageURL The URL for the image.
      * @param {boolean} anilistInfo Include the anime info from AniList.
      */
-    async fetchAnime(imageURL: string, anilistInfo: boolean): Promise<Response> {
+    async fetchAnime(imageURL: string, anilistInfo?: boolean): Promise<Response> {
         let url = `${this.uris.search}?url=${encodeURIComponent(imageURL)}`;
         if (anilistInfo === true)
             url += `&anilistInfo`;
