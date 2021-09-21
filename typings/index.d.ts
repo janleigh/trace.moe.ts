@@ -1,7 +1,15 @@
-export interface Response {
+export interface SearchResponse {
     frameCount: number;
     error: string;
     result: Result[];
+}
+
+export interface MeResponse {
+    id: string;
+    priority: number;
+    concurrency: number;
+    quota: number;
+    quotaUsed: number;
 }
   
 export interface Result {
