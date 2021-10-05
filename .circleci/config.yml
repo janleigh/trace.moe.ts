@@ -1,0 +1,36 @@
+version: 2.1
+
+general:
+  branches:
+    only:
+      - master
+      - stable
+
+machine:
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${HOME}/${kizu}/node_modules/.bin:${PATH}"
+    NODE_ENV: test
+  node:
+    version: 16
+  npm:
+    version: 6
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:16
+    working_directory: ~/kizu
+    steps:
+      - checkout
+      - run:
+          name: Update NPM
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: Install TypeScript
+          command: 'sudo npm install -g typescript'
+      - run:
+          name: Install NPM Dependencies
+          command: 'npm install'
+      - run:
+          name: Run Compile and Test
+          command: 'npm run compile && npm test'
