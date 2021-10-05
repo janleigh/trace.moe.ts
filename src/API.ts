@@ -1,11 +1,11 @@
 import fetch from "node-fetch";
-import { MeResponse, SearchResponse } from "../typings";
+import { MeResponse, SearchParameters, SearchResponse } from "../typings";
 
 export class API {
 
-    public uris: { 
+    public uris: {
         search: string,
-        me: string
+        me: string;
     };
 
     /**
@@ -15,17 +15,23 @@ export class API {
         this.uris = {
             search: `https://api.trace.moe/search`,
             me: `https://api.trace.moe/me`
-        }
+        };
     }
-
+   
     /**
      * Searches the website for the similar anime.
      * @param {string} imageURL The URL for the image.
-     * @param {boolean} anilistInfo Include the anime info from AniList.
+     * @param {SearchParameters} extras Extra parameters for the search.
      * @returns {SearchResponse}
      */
-    async fetchAnime(imageURL: string, anilistInfo?: boolean): Promise<SearchResponse> {
+    async fetchAnime(imageURL: string, { cutBorders = false, anilistId = false, anilistInfo = false }: SearchParameters = {}): Promise<SearchResponse> {
         let url = `${this.uris.search}?url=${encodeURIComponent(imageURL)}`;
+        if (cutBorders)
+            url += `&cutBorders`;
+        
+        if (anilistId)
+            url += `&anilistID=1`;
+
         if (anilistInfo === true)
             url += `&anilistInfo`;
 
@@ -35,12 +41,15 @@ export class API {
 
     /**
      * Returns your search quota and limits for your account.
+     * @param {string} key Your API key for trace.moe.
      * @returns {MeResponse}
      */
-    async fetchMe(): Promise<MeResponse> {
-        // TODO: Add support for API keys.
+    async fetchMe(key?: string): Promise<MeResponse> {
+        let url = this.uris.me;
+        if (key)
+            url += `?key=${key}`;
 
-        return await fetch(this.uris.me)
+        return await fetch(url)
             .then((res) => res.json());
     }
 

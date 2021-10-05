@@ -1,8 +1,14 @@
 <!--- TITLE --->
 # ★ trace.moe.ts
 
+<!--- BADGES --->
+  <a href="https://circleci.com/gh/TheRealKizu/trace.moe.ts/"><img src="https://img.shields.io/circleci/build/github/TheRealKizu/trace.moe.ts?style=flat-square" alt="CircleCI Build Status"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/TheRealKizu/trace.moe.ts?style=flat-square" alt="License"></a>
+
 <!--- DESCRIPTION --->
   > An API wrapper for https://trace.moe with typings.
+
+  <a href="https://nodei.co/npm/trace.moe.ts/"><img src="https://nodei.co/npm/trace.moe.ts.png?downloads=true" alt="npm installnfo" /></a>
 
 <!--- INSTALLATION --->
 ## — Installation
@@ -16,43 +22,24 @@
       $ yarn add trace.moe.ts
      ``` 
 
-<!--- EXAMPLE --->
-## — Examples
-   * Importing in your project
-     ```js
-     // JavaScript
-     const { API } = require("trace.moe.ts");
+<!--- USAGE --->
+## — Usage
+    ```js    
+    const { API } = require("trace.moe.ts");
+    // ES6 Import.
+    // import { API } from "trace.moe.ts";
 
-     // TypeScript 
-     import { API } from "trace.moe.ts";
+    const api = new API();
 
-     const api = new API();
-     ``` 
-   
-   * Fetching similar anime
-     ```js
-     const api = new API();
+    // Fetching anime.
+    await api.fetchAnime("https://cdn.kizu.cf/u/BKey7tr.jpeg");
 
-     await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg");
+    // Fetching anime with anilist info.
+    await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg", { anilistInfo: true });
 
-     /* 
-     == Example Response
-     {
-      anilist: {
-        id: 12189,
-        idMal: 12189,
-        title: { native: '氷菓', romaji: 'Hyouka', english: 'Hyouka' },
-        synonyms: [ 'Hyouka: Forbidden Secrets' ],
-        isAdult: false
-      },
-      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
-      episode: 3,
-      from: 471.25,
-      to: 474.83,
-      similarity: 0.9617157287525382
-     }
-     */
-     ``` 
+    // Fetching your qouta and account limits.
+    await api.fetchMe();
+    ```
 
 <!--- LICENSE --->
 ## — License

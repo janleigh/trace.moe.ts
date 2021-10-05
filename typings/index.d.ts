@@ -1,3 +1,9 @@
+export interface SearchParameters {
+    cutBorders?: boolean;
+    anilistId?: boolean;
+    anilistInfo?: boolean;
+}
+
 export interface SearchResponse {
     frameCount: number;
     error: string;
