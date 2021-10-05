@@ -24,7 +24,7 @@
 
 <!--- USAGE --->
 ## — Usage
-    ```js    
+  ```js    
     const { API } = require("trace.moe.ts");
     // ES6 Import.
     // import { API } from "trace.moe.ts";
@@ -39,7 +39,7 @@
 
     // Fetching your qouta and account limits.
     await api.fetchMe();
-    ```
+  ```
 
 <!--- LICENSE --->
 ## — License
