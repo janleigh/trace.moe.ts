@@ -1,23 +1,3 @@
-export interface SearchParameters {
-    cutBorders?: boolean;
-    anilistId?: boolean;
-    anilistInfo?: boolean;
-}
-
-export interface SearchResponse {
-    frameCount: number;
-    error: string;
-    result: Result[];
-}
-
-export interface MeResponse {
-    id: string;
-    priority: number;
-    concurrency: number;
-    quota: number;
-    quotaUsed: number;
-}
-  
 export interface Result {
     anilist: number|Anilist;
     filename: string;
