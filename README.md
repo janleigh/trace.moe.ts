@@ -46,28 +46,29 @@
 ## — Example Responses
 
    * `API#fetchAnime()`
-      ```js
-      {
-         anilist: 12189, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
-         filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
-         episode: 3,
-         from: 471.33,
-         to: 474.75,
-         similarity: 0.9658578643762691,
-         video: 'url-to-video',
-         image: 'url-to-image'
-      }
-      ```
+   ```js
+   {
+      anilist: 12189, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
+      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
+      episode: 3,
+      from: 471.33,
+      to: 474.75,
+      similarity: 0.9658578643762691,
+      video: 'url-to-video',
+      image: 'url-to-image'
+   }
+   ```
+   
    * `API#fetchMe()`
-      ```js
-      {
-         id: 'ip-or-token',
-         priority: 0,
-         concurrency: 1,
-         quota: 1000,
-         quotaUsed: 58
-      }
-      ```
+   ```js
+   {
+      id: 'ip-or-token',
+      priority: 0,
+      concurrency: 1,
+      quota: 1000,
+      quotaUsed: 58
+   }
+   ```
 
 ---
 
