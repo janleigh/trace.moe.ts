@@ -22,24 +22,55 @@
       $ yarn add trace.moe.ts
      ``` 
 
+---
+
 <!--- USAGE --->
 ## — Usage
   ```js    
-    const { API } = require("trace.moe.ts");
-    // ES6 Import.
-    // import { API } from "trace.moe.ts";
+  const { TraceMoe } = require("trace.moe.ts");
+  // ES6 Import.
+  import { TraceMoe } from "trace.moe.ts";
 
-    const api = new API();
+  const api = new TraceMoe();
 
-    // Fetching anime.
-    await api.fetchAnime("https://cdn.kizu.cf/u/BKey7tr.jpeg");
+  // Fetching anime.
+  await api.fetchAnime("https://cdn.kizu.cf/u/BKey7tr.jpeg"); // Returns Promise<SearchResponse>
 
-    // Fetching anime with anilist info.
-    await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg", { anilistInfo: true });
+  // Fetching anime with anilist info.
+  await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg", { anilistInfo: true });
 
-    // Fetching your qouta and account limits.
-    await api.fetchMe();
+  // Fetching your qouta and account limits.
+  await api.fetchMe(); // Returns Promise<MeResult>
   ```
+
+## — Example Responses
+
+   * `API#fetchAnime()`
+   ```js
+   {
+      anilist: 12189, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
+      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
+      episode: 3,
+      from: 471.33,
+      to: 474.75,
+      similarity: 0.9658578643762691,
+      video: 'url-to-video',
+      image: 'url-to-image'
+   }
+   ```
+   
+   * `API#fetchMe()`
+   ```js
+   {
+      id: 'ip-or-token',
+      priority: 0,
+      concurrency: 1,
+      quota: 1000,
+      quotaUsed: 58
+   }
+   ```
+
+---
 
 <!--- LICENSE --->
 ## — License

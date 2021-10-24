@@ -1,5 +1,7 @@
 import fetch from "node-fetch";
-import { MeResponse, SearchParameters, SearchResponse } from "../typings";
+import { MeResponse } from "../structures/MeResponse";
+import { SearchParameters } from "../structures/SearchParameters";
+import { SearchResponse } from "../structures/SearchResponse";
 
 export class API {
 
@@ -36,7 +38,8 @@ export class API {
             url += `&anilistInfo`;
 
         return await fetch(url)
-            .then((res) => res.json());
+            .then((res) => res.json())
+            .catch((err) => { throw new Error(err)} );
     }
 
     /**
@@ -50,7 +53,8 @@ export class API {
             url += `?key=${key}`;
 
         return await fetch(url)
-            .then((res) => res.json());
+            .then((res) => res.json())
+            .catch((err) => { throw new Error(err)} );
     }
 
 }

@@ -8,8 +8,7 @@ general:
 
 machine:
   environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${HOME}/${kizu}/node_modules/.bin:${PATH}"
-    NODE_ENV: test
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${HOME}/${test}/node_modules/.bin:${PATH}"
   node:
     version: 16
   npm:
@@ -19,18 +18,15 @@ jobs:
   build:
     docker:
       - image: circleci/node:16
-    working_directory: ~/kizu
+    working_directory: ~/test
     steps:
       - checkout
       - run:
-          name: Update NPM
-          command: 'sudo npm install -g npm@latest'
+          name: Install Yarn
+          command: 'sudo npm install -g -force yarn'
       - run:
-          name: Install TypeScript
-          command: 'sudo npm install -g typescript'
-      - run:
-          name: Install NPM Dependencies
-          command: 'npm install'
+          name: Install Dependencies
+          command: 'yarn install'
       - run:
           name: Run Compile and Test
-          command: 'npm run compile && npm test'
+          command: 'yarn run build && yarn test'

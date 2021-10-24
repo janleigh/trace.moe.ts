@@ -1,5 +1,9 @@
 # ★ Changelog
 
+## — 1.3.0
+
+   * Reworked project structure.
+
 ## — 1.2.1
 
    * Added support for API tokens on `<API>.fetchMe()`.
