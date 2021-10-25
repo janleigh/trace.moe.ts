@@ -11,7 +11,7 @@ describe("API#fetchAnime", () => {
     })
         .timeout(7500);
     it("result properties should exist", () => {
-        expect(result.anilist).to.be.a("number");
+        expect(result.anilist.id).to.be.a("number");
         expect(result.filename).to.be.a("string");
         expect(result.episode).to.be.a("number");
         expect(result.similarity).to.be.a("number");
