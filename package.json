@@ -1,6 +1,6 @@
 {
   "name": "trace.moe.ts",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "An API wrapper for https://trace.moe with typings",
   "main": "./dist/index.js",
   "types": "./lib/index.ts",
@@ -25,7 +25,8 @@
     "wrapper"
   ],
   "files": [
-    "dist/"
+    "dist/",
+    "lib/"
   ],
   "directories": {
     "lib": "lib/",

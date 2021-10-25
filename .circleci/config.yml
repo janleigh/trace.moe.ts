@@ -4,7 +4,6 @@ general:
   branches:
     only:
       - master
-      - stable
 
 machine:
   environment:
