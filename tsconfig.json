@@ -13,10 +13,9 @@
     "strictNullChecks": false,
     "noImplicitAny": false,
 
-    "typeRoots": [
-      "node_modules/@types/*",
-      "node_modules/*",
-      "typings/index.d.ts"
+    "types": [
+      "mocha",
+      "node",
     ],
     "esModuleInterop": true
   },

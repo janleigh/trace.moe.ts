@@ -1,3 +1,1 @@
-import { API as TraceMoe } from "./classes/API";
-
-export { TraceMoe };
+export { API as TraceMoe } from "./classes/API";

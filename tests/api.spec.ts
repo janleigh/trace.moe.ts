@@ -1,10 +1,9 @@
-const { expect } = require('chai');
-const { log } = require('console');
-const { TraceMoe } = require('../dist/index');
+import { expect } from 'chai';
+import { TraceMoe } from '../lib/index';
 const api = new TraceMoe();
 
 describe("API#fetchAnime", () => {
-    let result;
+    let result: { anilist: { id: any; }; filename: any; episode: any; similarity: any; video: any; image: any; };
     it("should return an anime object", async () => {
         const res = await api.fetchAnime("https://cdn.xndr.tech/u/KdU9oT3.jpeg");
         result = res.result[0];
@@ -21,7 +20,7 @@ describe("API#fetchAnime", () => {
 });
 
 describe("API#fetchMe", () => {
-    let result;
+    let result: { id: any; priority: any; concurrency: any; quota: any; quotaUsed: any; };
     it("should return an me object", async () => {
         result = await api.fetchMe();
     })
