@@ -1,5 +1,5 @@
 <!--- TITLE --->
-# ★ trace.moe.ts
+## ★ trace.moe.ts
 
 <!--- BADGES --->
   <a href="https://circleci.com/gh/TheRealKizu/trace.moe.ts/"><img src="https://img.shields.io/circleci/build/github/TheRealKizu/trace.moe.ts?style=flat-square" alt="CircleCI Build Status"/></a>
@@ -11,7 +11,7 @@
   <a href="https://nodei.co/npm/trace.moe.ts/"><img src="https://nodei.co/npm/trace.moe.ts.png?downloads=true" alt="npm installnfo" /></a>
 
 <!--- INSTALLATION --->
-## — Installation
+### — Installation
    * With `npm`
      ```
       $ npm install trace.moe.ts
@@ -25,7 +25,7 @@
 ---
 
 <!--- USAGE --->
-## — Usage
+### — Usage
   ```js    
   const { TraceMoe } = require("trace.moe.ts");
   // ES6 Import.
@@ -36,19 +36,16 @@
   // Fetching anime.
   await api.fetchAnime("https://cdn.kizu.cf/u/BKey7tr.jpeg"); // Returns Promise<SearchResponse>
 
-  // Fetching anime with anilist info.
-  await api.fetchAnime("https://cdn.kizu.cf/u/KdU9oT3.jpeg", { anilistInfo: true });
-
   // Fetching your qouta and account limits.
   await api.fetchMe(); // Returns Promise<MeResult>
   ```
 
-## — Example Responses
+### — Example Responses
 
    * `API#fetchAnime()`
    ```js
    {
-      anilist: 12189, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
+      anilist: ...Anilist, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
       filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
       episode: 3,
       from: 471.33,
@@ -73,5 +70,5 @@
 ---
 
 <!--- LICENSE --->
-## — License
+### — License
    * This project is licensed under the [GPL-3.0](LICENSE) license.

@@ -5,7 +5,7 @@ import { SearchResponse } from "../structures/SearchResponse";
 
 export class API {
 
-    public uris: {
+    private uris: {
         search: string,
         me: string;
     };
@@ -26,16 +26,13 @@ export class API {
      * @param {SearchParameters} extras Extra parameters for the search.
      * @returns {SearchResponse}
      */
-    async fetchAnime(imageURL: string, { cutBorders = false, anilistId = false, anilistInfo = false }: SearchParameters = {}): Promise<SearchResponse> {
-        let url = `${this.uris.search}?url=${encodeURIComponent(imageURL)}`;
+    async fetchAnime(imageURL: string, { cutBorders = false, anilistId = false }: SearchParameters = {}): Promise<SearchResponse> {
+        let url = `${this.uris.search}?url=${encodeURIComponent(imageURL)}&anilistInfo`;
         if (cutBorders)
             url += `&cutBorders`;
         
         if (anilistId)
             url += `&anilistID=1`;
-
-        if (anilistInfo === true)
-            url += `&anilistInfo`;
 
         return await fetch(url)
             .then((res) => res.json())

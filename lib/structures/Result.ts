@@ -1,5 +1,5 @@
 export interface Result {
-    anilist: number|Anilist;
+    anilist: Anilist;
     filename: string;
     episode: number|null;
     from: number;
