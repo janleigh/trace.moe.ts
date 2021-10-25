@@ -1,5 +1,9 @@
 ## ★ Changelog
 
+### — 1.3.3
+
+   * Support for CommonJS projects.
+
 ### — 1.3.2
 
    * Enabled `anilistInfo` by default.
