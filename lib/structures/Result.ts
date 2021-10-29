@@ -14,7 +14,7 @@ export interface Anilist {
     idMal: number;
     title: {
         native: string;
-        romanji: string;
+        romaji: string;
         english: string;
     }
     synonyms: string[];

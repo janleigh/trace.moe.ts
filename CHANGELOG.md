@@ -1,5 +1,9 @@
 ## ★ Changelog
 
+### — 1.3.5
+
+   * Fixed misspelled `romaji` property name.
+
 ### — 1.3.4
 
    * Support for CommonJS projects.
