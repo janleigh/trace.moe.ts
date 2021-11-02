@@ -1,5 +1,9 @@
 ## ★ Changelog
 
+### — 1.3.7
+
+   * Fix typo on TypeError.
+
 ### — 1.3.6
 
    * Added error handling. #BlameJavaScript

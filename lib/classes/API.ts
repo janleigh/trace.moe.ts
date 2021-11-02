@@ -53,7 +53,7 @@ export class API {
      */
     async fetchAnimeFromBuffer(buffer: Buffer, options?: SearchParameters): Promise<SearchResponse> {
         if (!(buffer) || !(buffer instanceof Buffer))
-            throw new TypeError(`'buffer' should be type string. Got type ${typeof buffer} instead.`);
+            throw new TypeError(`'buffer' should be type Buffer. Got type ${typeof buffer} instead.`);
 
         const url = this.utils.handleOptionalParameters(this.uris.search, undefined, options);
 
