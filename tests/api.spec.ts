@@ -7,8 +7,6 @@ describe("API#fetchAnime", () => {
     let result: { anilist: { id: any; }; filename: any; episode: any; similarity: any; video: any; image: any; };
     it("should return an anime object", async () => {
         const res = await api.fetchAnime("https://cdn.xndr.tech/u/KdU9oT3.jpeg", { anilistInfo: true });
-        console.log(res.result[0]);
-        
         result = res.result[0];
     })
         .timeout(7500);
