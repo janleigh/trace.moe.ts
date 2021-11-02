@@ -1,5 +1,5 @@
 export interface SearchParameters {
     cutBorders?: boolean;
-    anilistId?: boolean;
+    anilistID?: boolean;
     anilistInfo?: boolean;
 }

@@ -3,6 +3,7 @@
 
 <!--- BADGES --->
   <a href="https://circleci.com/gh/TheRealKizu/trace.moe.ts/"><img src="https://img.shields.io/circleci/build/github/TheRealKizu/trace.moe.ts?style=flat-square" alt="CircleCI Build Status"/></a>
+  <img src="https://img.shields.io/npm/dt/trace.moe.ts?style=flat-square" alt="Downloads"/>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/TheRealKizu/trace.moe.ts?style=flat-square" alt="License"></a>
 
 <!--- DESCRIPTION --->
@@ -12,15 +13,10 @@
 
 <!--- INSTALLATION --->
 ### — Installation
-   * With `npm`
-     ```
-      $ npm install trace.moe.ts
-     ``` 
-   
-   * With `yarn`
-     ```
-      $ yarn add trace.moe.ts
-     ``` 
+  You can use the following command to install this package, or replace `yarn add` with your package manager of choice.
+  ```
+   $ yarn add trace.moe.ts
+  ```
 
 ---
 
@@ -33,8 +29,11 @@
 
   const api = new TraceMoe();
 
-  // Fetching anime.
-  await api.fetchAnime("https://cdn.kizu.cf/u/BKey7tr.jpeg"); // Returns Promise<SearchResponse>
+  // Fetching similar anime using an url.
+  await api.fetchAnime("https://cdn.xndr.tech/u/BKey7tr.jpeg"); // Returns Promise<SearchResponse>
+
+  // Fetching similar anime using an image.
+  await api.fetchAnimeFromBuffer(fs.readFileSync("path-to-image")); // Returns Promise<SearchResponse>
 
   // Fetching your qouta and account limits.
   await api.fetchMe(); // Returns Promise<MeResult>
@@ -42,20 +41,40 @@
 
 ### — Example Responses
 
-   * `API#fetchAnime()`
+   * `API#fetchAnime()` and `API#fetchAnimeFromBuffer`
    ```js
    {
-      anilist: ...Anilist, // Look up structures/Result.ts for anilist properties if anilistInfo is specified.
-      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
+      frameCount: 9339843,
+      error: '',
+      result: Array<Result> // Refer to lib/structures/Result.ts or below for reference.
+   }
+   ```
+
+   *  [`Result.ts`](lib/structures/Result.ts)
+   ```js
+   {
+      // anilist: 12189 # If anilistInfo is false, this is the value it will return. If true, refer below.
+      anilist: {
+        id: 12189,
+        idMal: 12189
+        title: {
+          native: '氷菓',
+          romaji: 'Hyouka',
+          english: 'Hyouka'
+        },
+        synonyms: [ 'Hyouka: Forbidden Secrets' ],
+        isAdult: false
+      },
+      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4'
       episode: 3,
-      from: 471.33,
-      to: 474.75,
-      similarity: 0.9658578643762691,
+      from: 471.33, // Parsed in milliseconds.
+      to: 474.75, // Parsed in milliseconds.
+      similarity: 0.9658578643762691, // Will return 1 if 100% similar.
       video: 'url-to-video',
       image: 'url-to-image'
    }
    ```
-   
+
    * `API#fetchMe()`
    ```js
    {

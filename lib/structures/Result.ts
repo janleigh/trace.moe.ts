@@ -1,7 +1,7 @@
 export interface Result {
-    anilist: Anilist;
+    anilist: Anilist | any;
     filename: string;
-    episode: number|null;
+    episode: number | null;
     from: number;
     to: number;
     similarity: number;

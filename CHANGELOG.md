@@ -1,5 +1,11 @@
 ## ★ Changelog
 
+### — 1.3.6
+
+   * Added error handling. #BlameJavaScript
+   * Added `<API>.fetchAnimeFromBuffer()` which adds support for `Buffer` types.
+   * Make `anilistInfo` optional again.
+
 ### — 1.3.5
 
    * Fixed misspelled `romaji` property name.
