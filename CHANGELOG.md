@@ -1,5 +1,9 @@
 ## ★ Changelog
 
+### — 1.3.7-patch1
+
+   * Added missing tsconfig.json on compiled package.
+
 ### — 1.3.7
 
    * Fix typo on TypeError.

@@ -2,6 +2,12 @@ import { SearchParameters } from "../structures/SearchParameters";
 
 export class Utils {
 
+    /**
+     * Handles optional parameters for searching anime.
+     * @param {string} baseURL
+     * @param {string} imageURL
+     * @param {SearchParameters} params?
+     */
     handleOptionalParameters(baseURL: string, imageURL: string, params?: SearchParameters) {
         let reqURI = baseURL;
 

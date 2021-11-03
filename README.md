@@ -41,7 +41,7 @@
 
 ### — Example Responses
 
-   * `API#fetchAnime()` and `API#fetchAnimeFromBuffer`
+   * `API#fetchAnime()` and `API#fetchAnimeFromBuffer()`
    ```js
    {
       frameCount: 9339843,
@@ -56,7 +56,7 @@
       // anilist: 12189 # If anilistInfo is false, this is the value it will return. If true, refer below.
       anilist: {
         id: 12189,
-        idMal: 12189
+        idMal: 12189,
         title: {
           native: '氷菓',
           romaji: 'Hyouka',
@@ -65,7 +65,7 @@
         synonyms: [ 'Hyouka: Forbidden Secrets' ],
         isAdult: false
       },
-      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4'
+      filename: '[DHR&Hakugetsu][Hyouka][03][720P][BIG5][AVC_AAC].mp4',
       episode: 3,
       from: 471.33, // Parsed in milliseconds.
       to: 474.75, // Parsed in milliseconds.
