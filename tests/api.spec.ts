@@ -1,6 +1,6 @@
-import { expect } from 'chai';
+import { expect } from "chai";
 import { readFileSync } from "fs";
-import { TraceMoe } from '../lib/index';
+import { TraceMoe } from "../lib/index";
 const api = new TraceMoe();
 
 describe("API#fetchAnime", () => {
