@@ -1,9 +1,9 @@
 {
   "name": "trace.moe.ts",
-  "version": "1.3.7-patch1",
+  "version": "1.3.7-patch2",
   "description": "An API wrapper for https://trace.moe with typings",
   "main": "./dist/index.js",
-  "types": "./lib/index.ts",
+  "types": "./dist/index.d.ts",
   "author": "TheRealKizu <@therealkizu@protonmail.com>",
   "license": "GPL-3.0",
   "homepage": "https://github.com/TheRealKizu/trace.moe.ts#readme",

@@ -8,9 +8,11 @@
     ],
 
     "outDir": "dist/",
+    "declaration": true,
 
     "strict": true,
     "strictNullChecks": false,
+    "noImplicitAny": false,
 
     "types": [
       "mocha",

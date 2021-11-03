@@ -1,5 +1,10 @@
 ## ★ Changelog
 
+### — 1.3.7-patch2
+
+   * No longer shipping TypeScript files.
+   * Added type declarations.
+
 ### — 1.3.7-patch1
 
    * Added missing tsconfig.json on compiled package.
