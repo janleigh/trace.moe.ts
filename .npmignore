@@ -1,5 +1,6 @@
 .circleci
 node_modules
+lib
 tests
 
 .gitignore
