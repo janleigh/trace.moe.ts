@@ -11,7 +11,6 @@
     "declaration": true,
 
     "strict": true,
-    "strictNullChecks": false,
     "noImplicitAny": false,
 
     "types": [

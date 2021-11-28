@@ -8,7 +8,7 @@ export class Utils {
      * @param {string} imageURL
      * @param {SearchParameters} params?
      */
-    handleOptionalParameters(baseURL: string, imageURL: string, params?: SearchParameters) {
+    handleOptionalParameters(baseURL: string, imageURL?: string, params?: SearchParameters) {
         let reqURI = baseURL;
 
         // Set default values if not specified.
