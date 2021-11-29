@@ -1,5 +1,10 @@
 ## ★ Changelog
 
+### — 1.3.8
+
+   * Allow support for compiling with `strictNullChecks` enabled.
+   * Added missing JSDoc on some functions.
+
 ### — 1.3.7-patch2
 
    * No longer shipping TypeScript files.

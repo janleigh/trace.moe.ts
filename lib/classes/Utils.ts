@@ -4,9 +4,9 @@ export class Utils {
 
     /**
      * Handles optional parameters for searching anime.
-     * @param {string} baseURL
-     * @param {string} imageURL
-     * @param {SearchParameters} params?
+     * @param {string} baseURL The base URL to use for the search.
+     * @param {string} imageURL The base URL to use for the image.
+     * @param {SearchParameters} params The parameters to use for the search.
      */
     handleOptionalParameters(baseURL: string, imageURL?: string, params?: SearchParameters) {
         let reqURI = baseURL;
