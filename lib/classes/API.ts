@@ -6,9 +6,8 @@ import { SearchResponse } from "../structures/SearchResponse";
 import { Utils } from "./Utils";
 
 export class API {
-
     private uris: {
-        search: string,
+        search: string;
         me: string;
     };
 
@@ -27,7 +26,7 @@ export class API {
         };
         this.utils = new Utils();
     }
-   
+
     /**
      * Searches the website for the similar anime.
      * @param {string} imageURL The URL for the image.
@@ -35,14 +34,16 @@ export class API {
      * @returns {SearchResponse}
      */
     async fetchAnime(imageURL: string, options?: SearchParameters): Promise<SearchResponse> {
-        if (!(imageURL) || typeof imageURL !== "string")
+        if (!imageURL || typeof imageURL !== "string")
             throw new TypeError(`'imageURL' should be type string. Got type ${typeof imageURL} instead.`);
 
         const url = this.utils.handleOptionalParameters(this.uris.search, imageURL, options);
 
         return await fetch(url)
             .then((res) => res.json())
-            .catch((err) => { throw new Error(err)} );
+            .catch((err) => {
+                throw new Error(err);
+            });
     }
 
     /**
@@ -52,7 +53,7 @@ export class API {
      * @returns {SearchResponse}
      */
     async fetchAnimeFromBuffer(buffer: Buffer, options?: SearchParameters): Promise<SearchResponse> {
-        if (!(buffer) || !(buffer instanceof Buffer))
+        if (!buffer || !(buffer instanceof Buffer))
             throw new TypeError(`'buffer' should be type Buffer. Got type ${typeof buffer} instead.`);
 
         const url = this.utils.handleOptionalParameters(this.uris.search, undefined, options);
@@ -65,7 +66,9 @@ export class API {
             }
         })
             .then((res) => res.json())
-            .catch((err) => { throw new Error(err)} );
+            .catch((err) => {
+                throw new Error(err);
+            });
     }
 
     /**
@@ -75,12 +78,12 @@ export class API {
      */
     async fetchMe(key?: string): Promise<MeResponse> {
         let url = this.uris.me;
-        if (key)
-            url += `?key=${key}`;
+        if (key) url += `?key=${key}`;
 
         return await fetch(url)
             .then((res) => res.json())
-            .catch((err) => { throw new Error(err)} );
+            .catch((err) => {
+                throw new Error(err);
+            });
     }
-
 }

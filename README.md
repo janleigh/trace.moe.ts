@@ -1,18 +1,27 @@
-<!--- TITLE --->
-## ★ trace.moe.ts
+<!---
+this readme sucks
+--->
 
-<!--- BADGES --->
-  <a href="https://circleci.com/gh/TheRealKizu/trace.moe.ts/"><img src="https://img.shields.io/circleci/build/github/TheRealKizu/trace.moe.ts?style=flat-square" alt="CircleCI Build Status"/></a>
-  <img src="https://img.shields.io/npm/dt/trace.moe.ts?style=flat-square" alt="Downloads"/>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/TheRealKizu/trace.moe.ts?style=flat-square" alt="License"></a>
+<!--- TITLE --->
+<h2 align="center"> trace.moe.ts </h2>
 
 <!--- DESCRIPTION --->
-  > An API wrapper for https://trace.moe with typings.
-
-  <a href="https://nodei.co/npm/trace.moe.ts/"><img src="https://nodei.co/npm/trace.moe.ts.png?downloads=true" alt="npm installnfo" /></a>
+<div align="center">
+   <p/>
+   <strong>An API wrapper for https://trace.moe with typings.</strong>
+   <p/>
+   <a href="https://circleci.com/gh/janleigh/trace.moe.ts/">
+      <img src="https://img.shields.io/circleci/build/github/janleigh/trace.moe.ts?style=for-the-badge" alt="CircleCI Build Status"/>
+   </a>
+   <img src="https://img.shields.io/npm/dt/trace.moe.ts?style=for-the-badge" alt="Downloads"/>
+   <a href="LICENSE">
+      <img src="https://img.shields.io/github/license/janleigh/trace.moe.ts?style=for-the-badge" alt="License">
+   </a>
+   <br>
+</div>
 
 <!--- INSTALLATION --->
-### — Installation
+### ❖ Installation
   You can use the following command to install this package, or replace `yarn add` with your package manager of choice.
   ```
    $ yarn add trace.moe.ts
@@ -21,7 +30,7 @@
 ---
 
 <!--- USAGE --->
-### — Usage
+### ❖ Usage
   ```js    
   const { TraceMoe } = require("trace.moe.ts");
   // ES6 Import.
@@ -39,7 +48,7 @@
   await api.fetchMe(); // Returns Promise<MeResult>
   ```
 
-### — Example Responses
+### ❖ Example Responses
 
    * `API#fetchAnime()` and `API#fetchAnimeFromBuffer()`
    ```js
@@ -89,5 +98,5 @@
 ---
 
 <!--- LICENSE --->
-### — License
+### ❖ License
    * This project is licensed under the [GPL-3.0](LICENSE) license.

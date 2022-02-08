@@ -1,7 +1,6 @@
 import { SearchParameters } from "../structures/SearchParameters";
 
 export class Utils {
-
     /**
      * Handles optional parameters for searching anime.
      * @param {string} baseURL The base URL to use for the search.
@@ -18,23 +17,19 @@ export class Utils {
             anilistInfo: false
         };
         params = Object.assign(defaults, params);
-        
+
         if (imageURL !== undefined) {
             reqURI += `?url=${encodeURIComponent(imageURL)}&`;
         } else {
             reqURI += "?";
         }
 
-        if (params.cutBorders) 
-            reqURI += "cutBorders";
+        if (params.cutBorders) reqURI += "cutBorders";
 
-        if (params.anilistID)
-            reqURI += "anilistID=1";
+        if (params.anilistID) reqURI += "anilistID=1";
 
-        if (params.anilistInfo)
-            reqURI += "anilistInfo";
+        if (params.anilistInfo) reqURI += "anilistInfo";
 
         return reqURI;
     }
-
 }

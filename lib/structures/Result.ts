@@ -16,7 +16,7 @@ export interface Anilist {
         native: string;
         romaji: string;
         english: string;
-    }
+    };
     synonyms: string[];
     isAdult: boolean;
 }

@@ -1,6 +1,16 @@
+# Folders
 .circleci
+.yarn
 node_modules
 lib
 tests
 
+# Files
+.editorconfig
 .gitignore
+.prettieriignore
+.prettierrc
+.yarnrc.yml
+README.md
+tsconfig.json
+yarn.lock
