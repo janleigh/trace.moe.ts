@@ -2,7 +2,9 @@
 
 ### ❖ 1.3.9
 
-   * To be filled.
+   * Fixed a `nanoid` vulnerability.
+   * Source code has been properly formatted using Prettier.
+   * Dependencies bump. (what did you think? :kekw:)
 
 ### ❖ 1.3.8
 
