@@ -21,16 +21,18 @@ this readme sucks
 </div>
 
 <!--- INSTALLATION --->
-### ❖ Installation
+## :wrench: <samp>INSTALLATION</samp>
+
   You can use the following command to install this package, or replace `yarn add` with your package manager of choice.
   ```
-   $ yarn add trace.moe.ts
+  $ yarn add trace.moe.ts
   ```
 
 ---
 
 <!--- USAGE --->
-### ❖ Usage
+## :rocket: <samp>USAGE</samp>
+
   ```js    
   const { TraceMoe } = require("trace.moe.ts");
   // ES6 Import.
@@ -48,7 +50,7 @@ this readme sucks
   await api.fetchMe(); // Returns Promise<MeResult>
   ```
 
-### ❖ Example Responses
+## :scroll: <samp>EXAMPLES</samp>
 
    * `API#fetchAnime()` and `API#fetchAnimeFromBuffer()`
    ```js
@@ -97,6 +99,19 @@ this readme sucks
 
 ---
 
+<!--- DONATIONS --->
+## :money_with_wings: <samp>TIP JAR</samp>
+
+   If you enjoyed it and would like to show your appreciation, you may want to tip me here.
+
+   It is never required but always appreciated. Thanks from the bottom of my heart!
+
+   |  Donate With  |                      Address                       |
+   | :-----------: | :------------------------------------------------: |
+   |     Ko-fi     |     [Click Here](https://ko-fi.com/M4M272EAY)      |
+   |    PayPal     | [Click Here](https://paypal.me/JanLeighAugustineM) |
+
 <!--- LICENSE --->
-### ❖ License
-   * This project is licensed under the [GPL-3.0](LICENSE) license.
+## :book: <samp>LICENSE</samp>
+
+   This project is licensed under the [GPL-3.0](LICENSE) license.

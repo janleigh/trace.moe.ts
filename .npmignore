@@ -1,5 +1,6 @@
 # Folders
 .circleci
+.github
 .yarn
 node_modules
 lib
