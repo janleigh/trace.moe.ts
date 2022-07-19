@@ -8,10 +8,10 @@ tests
 
 # Files
 .editorconfig
+.eslintrc.json
 .gitignore
-.prettieriignore
-.prettierrc
+.prettierignore
+.prettierrc.json
 .yarnrc.yml
-README.md
 tsconfig.json
 yarn.lock
