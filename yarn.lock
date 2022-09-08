@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 6
+  version: 5
   cacheKey: 8
 
 "@cspotcode/source-map-support@npm:^0.8.0":
@@ -2272,7 +2272,7 @@ __metadata:
     prettier: ^2.5.1
     rimraf: ^3.0.2
     ts-node: ^10.9.1
-    typescript: ^4.4.4
+    typescript: 4.8.3
   languageName: unknown
   linkType: soft
 
@@ -2355,23 +2355,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.4":
-  version: 4.5.5
-  resolution: "typescript@npm:4.5.5"
+"typescript@npm:4.8.3":
+  version: 4.8.3
+  resolution: "typescript@npm:4.8.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 506f4c919dc8aeaafa92068c997f1d213b9df4d9756d0fae1a1e7ab66b585ab3498050e236113a1c9e57ee08c21ec6814ca7a7f61378c058d79af50a4b1f5a5e
+  checksum: 8286a5edcaf3d68e65c451aa1e7150ad1cf53ee0813c07ec35b7abdfdb10f355ecaa13c6a226a694ae7a67785fd7eeebf89f845da0b4f7e4a35561ddc459aba0
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>":
-  version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=7ad353"
+"typescript@patch:typescript@4.8.3#~builtin<compat/typescript>":
+  version: 4.8.3
+  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 858c61fa63f7274ca4aaaffeced854d550bf416cff6e558c4884041b3311fb662f476f167cf5c9f8680c607239797e26a2ee0bcc6467fbc05bfcb218e1c6c671
+  checksum: 0404a09c625df01934ef774b45ce1ca57ccae41cd625fcdbb82056715320d9329e70d9d75c2c732ec6ef947444ca978c189a332b71fa21f5c1437d5a83e24906
   languageName: node
   linkType: hard
 
