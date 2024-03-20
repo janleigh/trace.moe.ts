@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 6
+  version: 5
   cacheKey: 8
 
 "@cspotcode/source-map-support@npm:^0.8.0":
@@ -194,16 +194,18 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 17.0.16
-  resolution: "@types/node@npm:17.0.16"
-  checksum: 2d452a9e0ee7ec83d447d66dd2baf4dd05ef2fbcda39b06f73d86b36d5150d86c43a733d534d77467e7782104756944d42a35ed4b64113bda341b8334ee4d01d
+  version: 20.11.30
+  resolution: "@types/node@npm:20.11.30"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 7597767aa3e44b0f1bf62efa522dd17741135f283c11de6a20ead8bb7016fb4999cc30adcd8f2bb29ebb216906c92894346ccd187de170927dc1e212d2c07c81
   languageName: node
   linkType: hard
 
 "@types/node@npm:^16.7.5":
-  version: 16.11.22
-  resolution: "@types/node@npm:16.11.22"
-  checksum: 9d879b9b0427e21a11e3162917553d5bc3c7d68d1ef4aa631512144801fe59bc3b4da5965e7ea7c2db99394487b543d4f2499b318e12392574802ac4f975b7c4
+  version: 16.18.91
+  resolution: "@types/node@npm:16.18.91"
+  checksum: f5a85c90cf1fcedbeba9e1364cbc738cb8d6a67eee7912470d0d61174f6a70fa819ac53a1ca282689e623c47ea1a164171c22129f1e1e8741911f0009f2197d1
   languageName: node
   linkType: hard
 
@@ -2367,11 +2369,18 @@ __metadata:
 
 "typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>":
   version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 858c61fa63f7274ca4aaaffeced854d550bf416cff6e558c4884041b3311fb662f476f167cf5c9f8680c607239797e26a2ee0bcc6467fbc05bfcb218e1c6c671
+  checksum: c05c318d79c690f101d7ffb34cd6c7d6bbd884d3af9cefe7749ad0cd6be43c7082f098280982ca945dcba23fde34a08fed9602bb26540936baf8c0520727d3ba
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
   languageName: node
   linkType: hard
 
